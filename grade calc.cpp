@@ -23,5 +23,5 @@ int main()
     else { std::cout << "You got an F!";
     }
 
-
+    return 0;
 }
