@@ -1,3 +1,17 @@
+/*
+ * Brock Jenkinson
+ * 10/30/2024
+ * Professor Hussain
+ * CSCI-C212 Lab Assignment 4: Exception Handling
+ * 
+ * This program demonstrates various exception handling techniques in C++:
+ * - Division by zero handling
+ * - Array bounds checking
+ * - Input validation for different data types
+ * 
+ * The program uses custom exception classes and standard C++ exceptions
+ * to handle different types of errors that may occur during execution.
+ */
 #include <iostream>
 #include <limits> //for numeric_limits
 #include <stdexcept> //to throw exceptions
@@ -18,7 +32,7 @@ public: //constructor for exception class
 class Program { //create a class for the program itself
 private:
     static constexpr size_t ARRAY_SIZE = 5; //set the size of the array to 5
-    std::array<int, ARRAY_SIZE> numbers = {1, 2, 3, 4, 5};
+    std::array<int, ARRAY_SIZE> numbers = {1, 2, 3, 4, 5}; //using std::array and not a c-style array so that we can get the size of the array
 
     void clearInputStream() { //function to clear the input stream so that the program can continue
         std::cin.clear();
