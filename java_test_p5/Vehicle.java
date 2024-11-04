@@ -48,19 +48,3 @@ public class Vehicle {
         this.fuelCapacity = fuelCapacity;
     }
 }
-/* CHILD CLASSES // commented out because they are in separate files
-    public class Truck extends Vehicle {
-    }
-    public class Car extends Vehicle {
-        //code here
-    }
-    public class Engine extends Vehicle {
-        //code here
-    }
-    public class Bike extends Vehicle {
-        //code here
-    }
-    public class main extends Vehicle {
-        //code here
-    }
-*/
