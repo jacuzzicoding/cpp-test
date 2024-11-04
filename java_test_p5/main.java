@@ -1,4 +1,5 @@
 //main.java
+import java.util.Scanner;
 //this is the main class for the program that will be ran 
 /*it should:
 -prompt the user to enter the details of a new vehicle
@@ -15,13 +16,19 @@ public class main {
     public static String welcomeMsg = "Welcome to Tom's Garage!\n Enter details for a new vehicle.\n"; //welcome message to the user
     public String getMake() { //function to get the make of the vehicle
         System.out.println("Enter make: "); //msg to the user to prompt them to enter the make
-        String make = System.inlin.readLine(); //read the user input
+        Scanner scanner = new Scanner(System.in); //create a scanner object to read the user input (java does this instead of something like cin in c++)
+        String make = scanner.nextLine(); //read the user input
         return make; //return the make, so it is stored for the new vehicle
     }
     public String getModel() { //function to get the model of the vehicle
         System.out.println("Enter model: "); //msg to the user to prompt them to enter the model
         String model = System.inlin.readLine(); //read the user input
         return model; //return the model, so it is stored for the new vehicle
+    }
+    public String getYear() { //function to get the year of the vehicle
+        System.out.println("Enter year: "); //msg to the user to prompt them to enter the year
+        String year = System.inlin.readLine(); //read the user input
+        return year; //return the year, so it is stored for the new vehicle
     }
 
     public static void main(String[] args) {
