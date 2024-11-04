@@ -12,6 +12,14 @@ public abstract class Vehicle { //parent class, abstract because its the base cl
     private Engine engine; // Property "engine" to store the engine of the vehicle as its own object
     private double currentFuelLevel; // Property "currentFuelLevel" to store the current fuel level of the vehicle
 
+/* CONSTRUCTOR */
+public Vehicle(String make, String model, int year, int fuelCapacity) { //creating the constructor using the properties i declared above
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.fuelCapacity = fuelCapacity;
+}
+
  /* GETTERS */
     public String getMake() { // Getter for make, these are the methods that will be used to give the values of the properties to the child classes
         return make;
@@ -45,13 +53,6 @@ public abstract class Vehicle { //parent class, abstract because its the base cl
     }
     // Setter for fuelCapacity
     public void setFuelCapacity(int fuelCapacity) {
-        this.fuelCapacity = fuelCapacity;
-    }
-/* CONSTRUCTOR */
-    public Vehicle(String make, String model, int year, int fuelCapacity) { //creating the constructor using the properties i declared above
-        this.make = make;
-        this.model = model;
-        this.year = year;
         this.fuelCapacity = fuelCapacity;
     }
 
