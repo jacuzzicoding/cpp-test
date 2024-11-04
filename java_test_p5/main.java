@@ -45,4 +45,3 @@ public class main {
         Vehicle vehicle = new Vehicle(String make, String model, int year, int fuelCapacity); //create a new vehicle object
     }
 }
-\
