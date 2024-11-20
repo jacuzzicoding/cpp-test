@@ -1,18 +1,9 @@
 import java.util.Scanner;
-//this is the main class for the program that will be ran 
-/*it should:
--prompt the user to enter the details of a new vehicle CHECK!
--ask if they want to enter another vehicle, 
--if yes, prompt the user to enter the details of a new vehicle 
--if no, print the details of the vehicles entered
-    -details include: make, model, year, mileage
--demonstrate unique features of each vehicle type CHECK!
-*/
 public class Main {
     
 /* CONSTANTS */
-    private static final int MAX_VEHICLES = 100; // Maximum number of vehicles as per requirements
-    private static final String WELCOME_MSG = "Welcome to Tom's Garage!\n"; 
+    private static final int MAX_VEHICLES = 100; // Maximum number of vehicles as per requirements is 100
+    private static final String WELCOME_MSG = "Welcome to Tom's Garage!\n"; //keeping all of this from last week's assignment
 
 /* PROPERTIES */
     private final Scanner scanner = new Scanner(System.in);
@@ -22,7 +13,7 @@ public class Main {
 /* FUNCTIONS FOR MAIN */
     private String getInput(String prompt) { //function to get the user input as a string
         System.out.print("Enter " + prompt + ": "); //prompt the user to enter the details of the vehicle
-        return scanner.nextLine(); 
+        return scanner.nextLine();  //return the user input using the scanner object
     }
 
     //function to demonstrate unique features of each vehicle type
