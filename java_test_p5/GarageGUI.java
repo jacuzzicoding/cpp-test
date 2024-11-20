@@ -1,6 +1,6 @@
-import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import javax.swing.*;
 
 public class GarageGUI extends JFrame {
     // List to store vehicles (replacing the array from last assignment)
@@ -234,7 +234,7 @@ public class GarageGUI extends JFrame {
                     "Invalid Input",
                     JOptionPane.ERROR_MESSAGE);
             }
-        } catch (NumberFormatException | NullPointerException e) {
+        } catch (NumberFormatException | NullPointerException e) { // Catch both NumberFormatException and NullPointerException errors
             JOptionPane.showMessageDialog(this,
                 "Please enter a valid number.",
                 "Invalid Input",
@@ -242,21 +242,21 @@ public class GarageGUI extends JFrame {
         }
     }
 
-    // Updates the vehicle list display in the text area
-    private void updateVehicleList() {
-        StringBuilder display = new StringBuilder();
-        for (int i = 0; i < garage.size(); i++) {
-            display.append(i + 1).append(". ")
-                  .append(garage.get(i).toString())
-                  .append("\n");
+    // Function to update the vehicle list display in the text area
+    private void updateVehicleList() { 
+        StringBuilder display = new StringBuilder(); // Use a StringBuilder to build the string 
+        for (int i = 0; i < garage.size(); i++) { // Standard loop through the garage ArrayList
+            display.append(i + 1).append(". ") // This makes it so that the first vehicle is 1, the second is 2, and so on. Much easier than indexing from 0 for the user
+                  .append(garage.get(i).toString()) // This calls the toString method of the Vehicle object at index i
+                  .append("\n"); //this will add a new line after each vehicle for the GUI to not feel cramped
         }
-        vehicleList.setText(display.toString());
+        vehicleList.setText(display.toString()); // Set the text of the text area to the string I wrote
     }
 
     // Main method to run the GUI application
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new GarageGUI().setVisible(true);
+        SwingUtilities.invokeLater(() -> { //this will use swing utilities to run the GUI on the event dispatch thread (which I barely understand)
+            new GarageGUI().setVisible(true); //create a new GarageGUI object and set it to visible to show the GUI to the user
         });
     }
 }
