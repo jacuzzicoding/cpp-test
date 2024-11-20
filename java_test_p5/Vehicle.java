@@ -41,27 +41,3 @@ public abstract class Vehicle { // Made abstract since this is a base class that
             make, model, year, mileage);
     }
 }
-        /* METHODS //COMMENTED OUT FOR NOW
-        public abstract void start(); // Abstract method that all vehicles must implement - this ensures each vehicle type has its own unique starting behavior
-       
-        public void stop() { // Method to stop the vehicle
-            System.out.println(make + " " + model + " stopped.");
-        }
-     
-        // Method overloading example for refuel - we have two versions of the same method:
-        // This version fills the tank completely
-        public void refuel() {
-            this.currentFuel = this.fuelCapacity;
-            System.out.println(make + " " + model + " Refueling done - Fuel tank full.");
-        }
-     
-        // This version adds a specific amount of fuel
-        public void refuel(double amount) {
-            if (this.currentFuel + amount > this.fuelCapacity) {
-                System.out.println("Cannot overfill tank. Maximum capacity is " + this.fuelCapacity);
-                return;
-            }
-            this.currentFuel += amount;
-            System.out.println(make + " " + model + " Refueled with " + amount + " units of fuel.");
-        }
-      */
