@@ -133,7 +133,7 @@ public class GarageGUI extends JFrame {
 
             // Create appropriate vehicle type
             Vehicle vehicle = null;
-            switch (type) {
+            switch (type) { 
                 case "Car":
                     vehicle = new Car(make, model, year, mileage);
                     break;
@@ -146,10 +146,10 @@ public class GarageGUI extends JFrame {
             }
 
             // Add to garage and update display
-            if (vehicle != null) {
+            if (vehicle != null) { // Check if vehicle was created successfully
                 garage.add(vehicle);
                 updateVehicleList();
-                clearForm();
+                clearForm(); //
                 JOptionPane.showMessageDialog(this, "Vehicle added successfully!");
             }
 
@@ -177,7 +177,7 @@ public class GarageGUI extends JFrame {
         }
 
         try {
-            // Validate year
+            // Validate thst the year makes sense
             int year = Integer.parseInt(yearField.getText().trim());
             if (year < 1900 || year > 2025) {
                 JOptionPane.showMessageDialog(this,
@@ -209,8 +209,9 @@ public class GarageGUI extends JFrame {
     }
 
     // Clears the input form fields
+    //this is not working for me, I am not sure why
     private void clearForm() {
-        makeField.setText("");
+        makeField.setText(""); //this will clear the text in the make field
         modelField.setText("");
         yearField.setText("");
         mileageField.setText("");
