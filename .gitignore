@@ -32,3 +32,5 @@
 *.app
 .vscode/launch.json
 .vscode/launch.json
+java_test_p5/.DS_Store
+.DS_Store
