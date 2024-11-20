@@ -22,12 +22,7 @@ public abstract class Vehicle { // Made abstract since this is a base class that
        public int getMileage() {
            return mileage
        }
-       public Engine getEngine() { // Getter for the engine object
-           return engine;
-       }
-       public double getCurrentFuel() { // Getter for current fuel level
-           return currentFuel;
-       }
+
     
   
     /* CONSTRUCTOR */
