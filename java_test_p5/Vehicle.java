@@ -37,7 +37,9 @@ public abstract class Vehicle { // Made abstract since this is a base class that
     // toString method for displaying in the list
     @Override
     public String toString() {
-        return String.format("Make: %s, Model: %s, Year: %d, Mileage: %.1f", 
-            make, model, year, mileage);
+        //returning the make, model, year, and mileage of the vehicle. %.1f is used to format the mileage to one decimal place. %s is needed to format the strings, %d for integers in java and %f for floating point numbers
+        return String.format("Make: %s, Model: %s, Year: %d, Mileage: %.1f",  
+         
+        make, model, year, mileage);
     }
 }
