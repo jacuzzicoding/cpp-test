@@ -1,10 +1,10 @@
 //bike is a subclass of vehicle
-public class Bike extends Vehicle {
+public class Motorcycle extends Vehicle {
     /* PROPERTIES */
     private boolean isKickstandDown; // Property to track kickstand position
     
     /* CONSTRUCTOR */
-    public Bike(String make, String model, int year, int fuelCapacity, Engine engine) {
+    public Motorcycle(String make, String model, int year, int fuelCapacity, Engine engine) {
         super(make, model, year, fuelCapacity, engine);
         this.isKickstandDown = true; // Bikes start with kickstand down by default 
     }
