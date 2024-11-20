@@ -37,8 +37,8 @@ public class Main {
             } else if (garage[i] instanceof Truck) {
                 ((Truck) garage[i]).loadCargo();
                 ((Truck) garage[i]).toggleTrailer();
-            } else if (garage[i] instanceof Bike) {
-                ((Bike) garage[i]).toggleKickstand();
+            } else if (garage[i] instanceof Motorcycle) {
+                ((Motorcycle) garage[i]).toggleKickstand();
             }
         }
     }
@@ -65,7 +65,7 @@ public class Main {
                 return new Truck(make, model, year, fuelCapacity, engine); //returns a new truck
             case "bike":
                 engine = new Engine(2, "Bike Engine"); //2 cylinder bike engine
-                return new Bike(make, model, year, fuelCapacity, engine); //returns a new bike
+                return new Motorcycle(make, model, year, fuelCapacity, engine); //returns a new bike
             default:
                 System.out.println("Invalid vehicle type. Creating a basic car."); //If the user enters an invalid vehicle type, create a basic car as a default option
                 engine = new Engine(4, "Basic Engine"); //basic engine with 4 cylinders 
