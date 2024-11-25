@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GarageGUI",
+            "request": "launch",
+            "mainClass": "GarageGUI",
+            "projectName": "cpp-test_eeddebf7"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",

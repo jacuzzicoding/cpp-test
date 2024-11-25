@@ -1,22 +1,14 @@
 public class Car extends Vehicle {
     // One unique property for Car
-    private boolean hasAirConditioning;
+    private boolean hasAirConditioning; //simple true or false variable to determine if the car has air conditioning
     
-    public Car(String make, String model, int year, int fuelCapacity, Engine engine) {
-        super(make, model, year, fuelCapacity, engine);
-        this.hasAirConditioning = true;  // Most modern cars have AC
+    public Car(String make, String model, int year, double mileage) {
+        super(make, model, year, mileage); // Call the parent (Vehicle) constructor
+        this.hasAirConditioning = true;  // Most modern cars have AC so we can set this to true by default
     }
     
-    // One unique method for Car
     public void toggleAC() {
-        hasAirConditioning = !hasAirConditioning; //if the AC is on, turn it off. if it is off, turn it on
-        System.out.println("AC is now " + (hasAirConditioning ? "on" : "off")); //print out the status of the AC depending on the value of hasAirConditioning
-    }
-    
-    @Override
-    public void start() {
-        System.out.println("Car starts smoothly.");
-        System.out.println(getMake() + " " + getModel() + " starts.");
-        getEngine().start();
+        hasAirConditioning = !hasAirConditioning;
+        System.out.println("AC is now " + (hasAirConditioning ? "on" : "off")); //if the AC is on, print "on", if its off, print "off"
     }
 }
